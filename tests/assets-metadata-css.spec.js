@@ -24,7 +24,9 @@ test("name was updated", async ({ page }) => {
 
 test("description was updated", async ({ page }) => {
   await page.goto(localhost);
-  await expect(page.locator("main>section>p").first()).not.toHaveText(
-    "[Your Self Introduction]"
+  // Replace '[Expected Self Introduction]' with the actual expected text
+  await expect(page.locator("main>section>p").first()).toHaveText(
+    "[Expected Self Introduction]"
   );
 });
+
